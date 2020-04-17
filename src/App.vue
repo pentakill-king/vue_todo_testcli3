@@ -40,7 +40,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #999999;
-  /* margin-top: 60px; */
+
   background-color: black;
   height: 100%;
   margin: 0;

@@ -1,12 +1,19 @@
 <template>
 
   <div class="bot">
-    
-    
+
     <el-row>
-      <el-button @click="All" plain>all</el-button>
-      <el-button  plain>active</el-button>
-      <el-button plain>completed</el-button>
+
+      <el-button
+        @click="All"
+        plain
+      >all</el-button>
+
+      <el-button
+        plain
+        @click="del"
+      >clear</el-button>
+
     </el-row>
 
   </div>
@@ -15,28 +22,22 @@
 
 <script>
 export default {
-  // 声明接收来自list的todos数据
-
-
-  props: { mycity: Object ,CheckAll:Function},
+  //全选删除 from list
+  props: { mycity: Object, CheckAll: Function, clear: Function },
 
   methods: {
-    
-    All(){
-      this.CheckAll()
+    All() {
+      this.CheckAll();
+    },
+    del() {
+      this.clear();
     }
-
-    // CheckAll(val) {
-    //   val
-    //     ? (this.mycity.checkedCities = this.mycity.cities)
-    //     : (this.mycity.checkedCities = [])
-    // }
   }
 };
 </script>
 
  <style lang="less" scoped>
- .bot{
-   margin-top:1em;
- }
+.bot {
+  margin-top: 1em;
+}
 </style>
